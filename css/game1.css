@@ -1,3 +1,7 @@
+#allBoard{
+    min-width:1400px;
+}
+
 #beforestart{
     position: absolute;
     top:150px;
