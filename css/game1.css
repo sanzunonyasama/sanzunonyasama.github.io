@@ -486,7 +486,7 @@
 [id*="charReal"] .charRealAttackInfo{
     opacity:0;
     transition: all 0.3s;
-    background-image:url('../images/game1/show/AttackInfo.png');
+    background-image:url('../images/game1/show/attackinfo.png');
     position:absolute;
     background-size:contain;
     background-repeat: no-repeat;
