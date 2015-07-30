@@ -1,0 +1,596 @@
+#beforestart{
+    position: absolute;
+    top:150px;
+    left:20%;
+    width:60%;
+    right:20%;
+    min-height:500px;
+    z-index:3;
+    background-color:rgba(200,200,100,0.1);
+    border: solid 15px #fff;
+    padding:30px;
+    border-radius: 10px;
+    box-shadow:0px 0px 20px #ccc;
+}
+
+#showerror{
+    display:none;
+    position:fixed;
+    top:30%;
+    left:calc(50% - 223px);
+    background-image:url('../images/game1/show/showerror.png');
+    background-size:contain;
+    background-repeat: no-repeat;
+    height: 172px;
+    width: 447px;
+    z-index:1000;
+    font-family:"Georgia";
+    font-size:40px;
+    font-weight: bolder;
+    line-height:172px;
+    text-align:center;
+    color: #666;
+}
+
+#showerror span{
+    transition: color 0.3s;
+    position: absolute;
+    top: 40px;
+    font-size: 25px;
+    left: 175px;
+    cursor:pointer;
+    color:#999;
+}
+
+#showerror span:hover{
+    color:#000;
+}
+
+#showerror [name ='preset']{
+    height:100%;
+    width:100%;
+}
+
+#showerror [name ='preset'].movetimeowari{
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-image:url('../images/game1/show/movetimeowari.png');
+}
+
+#showerror [name ='preset'].gameover{
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-image:url('../images/game1/show/gameover.png');
+}
+
+#showerror [name ='preset'].error_noEnemyCanNormalAttack{
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-image:url('../images/game1/show/error_attackshibai.png');
+}
+
+#mapChoose_Hakureijinja{
+    position: absolute;
+    width:200px;
+    height:300px;
+    top:150px;
+    left:60px;
+    background-image: url('../images/game1/map/map-hakureijinja.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor:pointer;
+    opacity:0.5;
+    transition: all 0.3s;
+}
+
+#mapChoose_more{
+    position: absolute;
+    width:200px;
+    height:300px;
+    top:150px;
+    left:300px;
+    background-image: url('../images/game1/map/map-hakureijinja.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity:0.2;
+    transition: all 0.3s;
+    color:#fff;
+    text-shadow: 0px 0px 5px #000;
+    text-align:center;
+    line-height:300px;
+    font-size:30px;
+    font-weight: bolder;
+}
+
+#mapChoose_Hakureijinja:hover{
+    opacity:1;
+}
+
+#playboard{
+    position:relative;
+    height:800px;
+    width:80%;
+    left:10%;
+    padding:20px;
+    background-color: rgba(255,255,255,0.8);
+}
+
+#playboard > div{
+    display:none;
+}
+
+#charachterBoard{
+
+    margin: 40px;
+    height: 100px;
+}
+
+#userInfo{
+    width: 300px;
+    background-color: #eee;
+    padding: 10px;
+}
+
+#userPhoto{
+    margin-left:20px;
+    border-radius: 40px;
+    width: 80px;
+}
+
+#douguBoard{
+    border: solid 3px #eee;
+    height: 100px;
+    right: 60px;
+    top: 60px;
+    left: 420px;
+    position: absolute;
+}
+
+#mapBoard{
+    transition:all 0.3s;
+    position: absolute;
+    border: solid 3px #eee;
+    min-height: 500px;
+    height:auto;
+    top: 200px;
+    left: 60px;
+    right: 60px;
+    padding:20px;
+    overflow: hidden;
+}
+
+
+[id *=mapGrid]{
+    transition:all 0.3s,transform 1s;
+    position:absolute;
+    width:117.6px;
+    height:135.2px;
+    background-size:contain;
+    background-repeat: no-repeat;
+    opacity:0.05;
+}
+
+[id *=mapGrid].mapGridUsed{
+    opacity:0.5;
+    cursor:pointer;
+}
+
+[id *=mapGrid].mapGridUsed:hover,[id *=mapGrid].mapGridUsed.mapGridCharOn{
+    opacity:0.8;
+}
+
+[id *=mapGrid].mapGridUsed.mapGridCanreach{
+    opacity:0.4;
+}
+
+[id *=mapGrid].mapGridUsed.mapGridCanreach:hover{
+    opacity:0.8;
+}
+
+.mapGrid_typeMahounomori{
+    background-image: url('../images/game1/map/map-mahounomori.png');
+}
+
+.mapGrid_typeHakureijinja{
+    background-image: url('../images/game1/map/map-hakureijinja.png');
+}
+
+.mapGrid_typeJinjaOldtree {
+    background-image: url('../images/game1/map/map-jinjaoldtree.png');
+}
+
+
+.mapGridCantgo .mapGridState{
+    background-image:url('../images/game1/map/map-cantgo.png');
+    opacity:0.4;
+}
+
+.mapGridCanattack .mapGridState{
+    opacity:0.6;
+    background-image:url('../images/game1/map/map-canattack.png');
+}
+
+.mapGridCanreach .mapGridState{
+    transition:transform 1s,left 1s,right 1s,top 1s,bottom 1s;
+    background-image:url('../images/game1/map/map-cango.png');
+    opacity:0.4;
+}
+
+.mapGridCanreach:hover{
+    transition:transform 10s linear;
+    transform:rotate(360deg);
+
+}
+
+.mapGridCanreach:hover .mapGridState{
+    transition:transform 10s,left 3s,right 3s,top 3s,bottom 3s,opacity 1s;
+    left:20px;
+    right:20px;
+    top:23px;
+    bottom:23px;
+    transform:rotate(1080deg);
+    opacity:0.7;
+}
+
+.mapGridState{
+    transition:all 0.3s;
+    position:absolute;
+    margin:auto;
+    left:0px;
+    right:0px;
+    top:0px;
+    bottom:0px;
+    background-size:contain;
+    background-repeat: no-repeat;
+    z-index:3;
+}
+
+
+
+
+
+
+
+
+[id *=charReal]{
+    transition:width 0.1s,height 0.1s,left 0.5s,top 0.5s;
+    position:absolute;
+    width:94px;
+    height:129px;
+    cursor:pointer;
+    z-index:5;
+}
+
+
+/*[id*=charReal]:hover{
+    height: 159px;
+    width: 114px;
+}*/
+
+
+[id*=charReal] .charRealPhoto{
+    transition:left 0.1s,top 0.1s;
+    position:relative;
+    left:0px;
+    top:0px;
+    width:100%;
+    height:100%;
+    background-size:contain;
+    background-repeat: no-repeat;
+
+}
+
+
+/*[id*=charReal]:hover .charRealPhoto{
+    left:-10px;
+    top:-30px;
+
+}*/
+
+
+[id*="charReal"] .charRealPropertyOnInfo{
+    opacity:0;
+    transition: all 0.3s;
+    background-image:url('../images/game1/show/propertyOnChar.png');
+    position:absolute;
+    background-size:contain;
+    background-repeat: no-repeat;
+    height: 21px;
+    width: 55px;
+    top: 0px;
+    left: -8px;
+}
+[id*="charReal"].charClicked .charRealPropertyOnInfo {
+    opacity: 1;
+    height: 129px;
+    width: 334px;
+    top: -156px;
+    left: -115px;
+}
+
+[id*="charReal"] .charRealPropertyOnInfo [name='health']{
+    position: absolute;
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgb(154,78,65);
+    font-family: Georgia;
+    left: 100px;
+    top: 19px;
+    width: 55px;
+    text-align: center;
+}
+
+[id*="charReal"] .charRealPropertyOnInfo [name='mahou']{
+    position: absolute;
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgb(91,75,115);
+    font-family: Georgia;
+    left: 100px;
+    top: 49px;
+    width: 55px;
+    text-align: center;
+}
+
+[id*="charReal"] .charRealPropertyOnInfo [name='fuli']{
+    position: absolute;
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgb(121,154,75);
+    font-family: Georgia;
+    left: 100px;
+    top: 77px;
+    width: 55px;
+    text-align: center;
+}
+[id*="charReal"] .charRealPropertyOnInfo [name='actiontime']{
+    position: absolute;
+    font-size: 40px;
+    font-weight: bolder;
+    color: rgb(130,50,80);
+    font-family: Georgia;
+    right: 80px;
+    top: 60px;
+    width: 30px;
+    text-align: right;
+    opacity: 0.9;
+}
+
+[id*="charReal"] [name = 'charRealValueChange']{
+    transition: all 0.5s;
+    position: absolute;
+    font-size: 30px;
+    font-family: Georgia;
+    text-shadow: 0px 0px 5px #000,0px 0px 5px #000;
+    text-align: center;
+    z-index: inherit;
+    font-weight: bolder;
+    left: 30px;
+    opacity: 0.2;
+    top:10px;
+}
+
+[id*="charReal"] [name = 'charRealValueChange'].blowout{
+    top:-50px;
+    opacity:1;
+}
+
+[id*="charReal"] [name = 'charRealValueChange'] [name = 'health']{
+    color:rgb(255,134,167);
+}
+
+[id*="charReal"] [name = 'charRealValueChange'] [name = 'mahou']{
+    color:rgb(134,167,255);
+}
+
+
+
+[id*="charReal"] [name = 'charRealProgress'] [name = 'healthProgress'] {
+    transition: all 0.3s;
+    height: 8px;
+    background-color: rgb(255,138,103);
+    box-shadow: 0px 0px 3px #000,0px 0px 3px #000,0px 0px 3px #000;
+}
+
+[id*="charReal"] [name = 'charRealProgress']{
+
+    position: absolute;
+    left: 30%;
+    top: 0px;
+    z-index: inherit;
+    overflow: visible;
+}
+
+[id*="charReal"] [name = 'charRealProgress'] [name = 'mahouProgress'] {
+    transition: all 0.3s;
+    position: absolute;
+    top: 0px;
+    right: 100%;
+    height: 8px;
+    box-shadow: 0px 0px 3px #000,0px 0px 3px #000,0px 0px 3px #000;
+    background-color:rgb(138,153,255);
+}
+
+[id*="charReal"] .charRealPhoto [name$='button']{
+    transition: all 0.3s;
+}
+
+[id*="charReal"] .charRealPhoto [name$='button']:hover{
+    width:70px;
+}
+
+[id*="charReal"] .charRealPhoto [name='attackbutton']{
+    display:none;
+    position:absolute;
+    top: 50px;
+    left: -30px;
+    width: 60px;
+    height: 40px;
+    cursor:pointer;
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-image: url('../images/game1/show/attackbutton.png');
+}
+
+[id*="charReal"] .charRealPhoto [name='dougubutton']{
+    display:none;
+    position:absolute;
+    top: 20px;
+    left: -30px;
+    width: 60px;
+    height: 40px;
+    cursor:pointer;
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-image: url('../images/game1/show/dougubutton.png');
+}
+
+[id*="charReal"] .charRealPhoto [name='statebutton']{
+    display:none;
+    position:absolute;
+    top: 80px;
+    left: -30px;
+    width: 60px;
+    height: 40px;
+    cursor:pointer;
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-image: url('../images/game1/show/statebutton.png');
+}
+
+[id*="charReal"].charClicked .charRealPhoto [name='statebutton']{
+    display:block;
+}
+
+[id*="charReal"].charClicked .charRealPhoto [name='dougubutton']{
+    display:block;
+}
+
+[id*="charReal"].charClicked .charRealPhoto [name='attackbutton']{
+    display:block;
+}
+
+[id*="charReal"] .charRealPhoto [name='cancelbutton']{
+    display:none;
+    position:absolute;
+    top:-45px;
+    width:60px;
+    height:40px;
+    left:calc(50% - 30px);
+    cursor:pointer;
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-image: url('../images/game1/show/cancelbutton.png');
+}
+
+[id*="charReal"] .charRealAttackInfo{
+    opacity:0;
+    transition: all 0.3s;
+    background-image:url('../images/game1/show/AttackInfo.png');
+    position:absolute;
+    background-size:contain;
+    background-repeat: no-repeat;
+    height: 21px;
+    width: 55px;
+    top: 0px;
+    left: -8px;
+}
+
+[id*="charReal"].charAttackClicked .charRealAttackInfo{
+    opacity: 1;
+    height: 129px;
+    width: 334px;
+    top: -156px;
+    left: -115px;
+}
+
+[id*="charReal"].charAttackClicked .charRealAttackInfo [name = 'tmpcheck']{
+    position: absolute;
+    background-color: rgba(0,0,0,0);
+    transition:all 0.3s;
+    border-radius: 5px;
+    width: 250px;
+    height: 19px;
+    top: 27px;
+    left: 40px;
+}
+
+[id*="charReal"].charAttackClicked .charRealAttackInfo [name = 'tmpcheck']:hover{
+    background-color: rgba(0,0,0,0.3);
+}
+
+
+[id*="charReal"] .charRealPhoto [name = 'attackchoosed']{
+    display:none;
+    transition:all 0.3s;
+}
+
+[id*="charReal"].attackerhakureireimu .charRealPhoto [name = 'attackchoosed']{
+    display:block;
+
+}
+[id*="charReal"].attackerhakureireimu .charRealPhoto [name = 'attackchoosed'] span{
+    transition: transform 0.6s;
+    position: absolute;
+    background-image: url('../images/game1/attack/hakureihierogram.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 100px;
+    left: 33%;
+    top: -30px;
+}
+
+[id*="charReal"].attackerhakureireimu:hover .charRealPhoto [name = 'attackchoosed'] span:first-child {
+    transform: rotate(-20deg);
+}
+
+[id*="charReal"].attackerhakureireimu:hover .charRealPhoto [name = 'attackchoosed'] span:last-child {
+    transform: rotate(20deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------Danmaku--------------------------------------------*/
+
+
+#mapBoard .hakureihierogram{
+    opacity: 0;
+    background-image: url('../images/game1/attack/hakureihierogram.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width:20px;
+    height:45px;
+    z-index:10000;
+    position:absolute;
+}
+
+
+
+
+
+
+
