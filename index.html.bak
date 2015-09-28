@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = 'utf-8'>
+    <title> 川雾の幻想乡异闻</title>
+    <link rel = "stylesheet" href = "./css/index.css"/>
+    <link rel = "stylesheet" href = "./lib/bootflat/css/site.min.css" />
+
+    <script type = "text/javascript" src = "./lib/bootflat/js/site.min.js"></script>
+
+    <script type = "text/javascript" src = "./lib/jquery.bxslider/jquery.bxslider.min.js"></script>
+
+
+    <link href="./lib/jquery.bxslider/jquery.bxslider.css" rel="stylesheet" />
+</head>
+
+
+<body>
+<!--nav&topic-->
+    <div id="indexBottomTools" style="display: block; bottom: 20px;">
+        <div class="qr_tool">
+            微信号
+        </div>
+        <a id="feedback" href="#"  title="意见反馈">意见反馈</a>
+        <a id="scrollUp" href="#" title="飞回顶部" style="transition-property: all; -webkit-transition-property: all; transition-duration: 0s; -webkit-transition-duration: 0s; transition-timing-function: ease; -webkit-transition-timing-function: ease; display: block; opacity: 1;"></a>
+    </div>
+
+    <div class="docs-header">
+        <!--nav-->
+        <nav class="navbar navbar-default navbar-custom" role="navigation" id ="indexNavbar">
+            <div class="container">
+
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a class="nav-brand"><img height = '120' src="./images/logo.png"></img></a></li>
+                        <li><a class="nav-link current">首页</a></li>
+                        <li><a class="nav-link" href="game1.html">小游戏</a></li>
+                        <li><a class="nav-link"></a></li>
+
+                    </ul>
+                </div>
+
+                <div class="sign">
+                    <a href="#">登录</a><b> | </b><a href="#">注册</a>
+                    <div class="fold">
+                        <div> <a class="icon-login-weibo" href="#" title="新浪微博登录"></a><a class="icon-login-qq" href="#" title="QQ登录"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class = "container-fluid">
+            <div class = "row">&nbsp;</div>
+            <div class = "row">&nbsp;</div>
+            <div class = "row">
+                <div  class = " col-sm-offset-2 col-sm-8 sliderWrapper">
+                    <ul id="indexSlider" class="bxslider" width = "100%">
+                        <li><img width = "100%" src="./images/banner/pic1.jpg" /></li>
+                        <li><img width = "100%" src="./images/banner/pic2.jpg" /></li>
+                        <li><img width = "100%" src="./images/banner/pic3.jpg" /></li>
+                        <li><img width = "100%" src="./images/banner/pic4.jpg" /></li>
+                        <li><img width = "100%" src="./images/banner/pic5.jpg" /></li>
+                        <li><img width = "100%" src="./images/banner/pic6.jpg" /></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="footer" id="indexFooter">
+        <div class="container">
+            <div class="clearfix">
+                <div class="footer-logo"><a href="#"><img height = 120 src="./images/logo.png"></img></a></div>
+                <dl class="footer-nav">
+                    <dt class="nav-title">游戏</dt>
+                    <dd class="nav-item"><a href="game1.html">名字被神隐的游戏</a></dd>
+
+                </dl>
+                <dl class="footer-nav">
+                    <dt class="nav-title">刊物</dt>
+                    <dd class="nav-item"><a href="#">博丽风尚</a></dd>
+                    <dd class="nav-item"><a href="#">八目鳗的厨房</a></dd>
+                </dl>
+                <dl class="footer-nav">
+                    <dt class="nav-title">新闻</dt>
+                    <dd class="nav-item"><a href="#">地域统计</a></dd>
+                    <dd class="nav-item"><a href="#">比赛分析</a></dd>
+                </dl>
+                <dl class="footer-nav">
+                    <dt class="nav-title">联系我们</dt>
+                    <dd class="nav-item"><a href="#"></a></dd>
+                    <dd class="nav-item"><a href="#">游过三途河来找我</a></dd>
+                </dl>
+            </div>
+            <div class="footer-copyright text-center">Copyright © 2015 BeDancer.All rights reserved.</div>
+        </div>
+    </div>
+
+
+    <script type = "text/javascript">
+
+
+        $('#indexSlider').bxSlider({
+            auto:false,
+            adaptiveHeight:true,
+            pause:5000
+        });
+
+    </script>
+
+    <script type = "text/javascript" src = "./lib/bootflat/js/site.min.js"></script>
+    <script type = "text/javascript" src = "./js/game1.js"></script>
+</body>
+
+</html>
+
