@@ -77,7 +77,7 @@ var sentence = [
         ["啊，不小心在花园里摔了一跤。新衣服弄脏啦。","在小径上走的时候没注意，绊到了一个石头，摔了一跤，新衣服上都是泥，心情差极了。","H2"],
     ],
     [
-        ["想起来早上在自己的口袋里藏了好几块巧克力！正好饿的不行，太棒了！","想起来早上在自己的口袋里藏了好几块巧克力！正好饿的不行，太棒了！","H0"],
+        ["想起来早上在自己的口袋里藏了好几块巧克力！正好饿的不行，太棒了！","想起来早上在自己的口袋里藏了好几块巧克力！正好饿的不行，太棒了！","H0","H+"],
         ["听说我的作业被表扬啦。","同学来告诉我，我的作业被表扬了，心里别提有多高兴了。","H1"],
         ["听说明天放假啦，真是太开心了！","突然听到广播里说，明天放假啦。真是突如其来的好消息，太开心了！","H2"],
     ],//碰到心情的时候
@@ -137,7 +137,7 @@ function getSentence(data){
     for(;;){
         var pass = true;
         var i =  parseInt(Math.random() * data.length);
-
+        console.log(data[i][0]);
         var tot = data[i][2].length;
         for(var j = 0;j  < tot ; j+=2){
 
@@ -153,9 +153,12 @@ function getSentence(data){
                     break;
             }
         }
-        //console.log(pass);
+        console.log(pass);
+
         if(pass == false)
             continue;
+
+
         addText(getReplace(data[i][1]),"storyboard");
         addText(getReplace(data[i][0]),"expboard");
         tmp_for_story_exp_sync++;
@@ -253,7 +256,7 @@ function init(){
     fresh();
     $("#tuduke").click(function(){
         if(step==3){
-            //$("#owari").trigger("click");
+            $("#owari").trigger("click");
             return false;
         }
         step++;
@@ -262,6 +265,8 @@ function init(){
     });
 
     $("#owari").click(function(){
+        $(this).addClass("disabled");
+        $(this).unbind("click");
         step++;
         getSentence(sentence[5]);
         $("#storyboard").removeClass("hidden");
