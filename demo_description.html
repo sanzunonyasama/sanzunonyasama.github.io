@@ -1,0 +1,625 @@
+<!DOCTYPE html><html>
+
+<head>
+<meta charset="utf-8">
+<title>布偶讲故事</title>
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+</head>
+<body>
+<h1 id="toc_0">布偶讲故事demo说明</h1>
+
+<h2 id="toc_1">demo讲故事的结构</h2>
+
+<h3 id="toc_2">1.组成</h3>
+
+<blockquote>
+<p>第一部分：说话，每次碰到一个物体会说一句话。</p>
+
+<p>第二部分：日记，先有一句开头语。之后对今天碰到的每一个物体有一句描述或评论。最后一句结尾。</p>
+</blockquote>
+
+<h3 id="toc_3">2.第一部分：即时说话部分</h3>
+
+<blockquote>
+<p>以口语、随意的方式说话</p>
+
+<p>语句尽可能简短。</p>
+
+<p>语句设计地尽可能便于更换词素。</p>
+</blockquote>
+
+<h3 id="toc_4">3.第二部分：日记部分</h3>
+
+<blockquote>
+<p>1.先对于当前状态（如心情、饥饿程度）做一个说明,作为开篇.</p>
+
+<p>2.接下来对于即使说话部分做一个陈述并加以补充。语句之间会动态生成连接词。陈述发生的一个片段时，相比说话时，会加入一些隐藏的、相关的额外内容，以体现故事的丰富性。</p>
+
+<p>3.最后对于一整天做一个总结。</p>
+</blockquote>
+
+<h2 id="toc_5">demo的设计思想</h2>
+
+<h3 id="toc_6">1.用全局变量模拟人物的真实状态，实现对于遇见同一物体的不同发言</h3>
+
+<blockquote>
+<p>控制三个全局变量  </p>
+
+<pre><code class="language-none">  1.心情（0难过 1一般 2开心）
+  2.饥饿程度（0很饿 1一般 2很饱）
+  3.时间(0早上 1中午 2晚上)</code></pre>
+
+<p>布偶碰到一个物体，会根据心情变量和饥饿变量的值，而说出不同的话</p>
+
+<pre><code class="language-none">  例如，布偶在很饱的时候碰到了汉堡，会说“吃的好饱，一点也没有食欲呢。”。
+  若是很饿的时候，则会说“太棒了！正饿着呢。” 并且吃完后会增加心情。</code></pre>
+
+<p>心情和饥饿状态不会一直显示出来，但是会通过布偶的语言时时刻刻体现出来，也会因为遇到不同的物体而发生变化。这两个变量使得故事具有一定的随机性和前后一致性。</p>
+</blockquote>
+
+<h3 id="toc_7">2.人物前后遇到两个物体的关联，将会通过三个全局变量来体现</h3>
+
+<blockquote>
+<p>如果直接实现碰到不同物体的前后关联，过于繁琐。但是依靠三个全局变量，可以一定程度实现这一部分。</p>
+
+<pre><code class="language-none">  举例：
+  一开始心情不好并且饥饿，那么日记的开篇是：
+      “不知道为什么，今天心情不太好。早上饭也没吃就去了学校。“
+  那么如果碰到了一个老师，就会在日记里写下：
+      “接着，遇见了老师，他说我没什么精神呐。”
+  然后碰到了汉堡，就会写：
+      “然后我发现了一个汉堡包,正好饿着呢，我就把他吃啦。”
+  吃完汉堡后，心情数值上涨了。然后遇见了同学，就会在日记写下：
+      “之后，路上碰到了楠西,很有精神地打了一个招呼。”
+  根据心情和饥饿程度，最后结尾会这么写：
+      “算是不错的一天吧。”</code></pre>
+
+<p>可以发现，从出门前没吃早饭，到遇见老师被说没精神，之后遇见汉堡感到开心，再之后到遇见同学精神地打招呼，到最后的总结“不错的一天”，整个故事的前后关联比较符合逻辑。它主要依靠饥饿属性和心情属性来控制人偶的话语。</p>
+</blockquote>
+
+<h3 id="toc_8">3.抽离语句中的部分词素，加入一定程度的随机化。</h3>
+
+<blockquote>
+<p>看一个例子</p>
+
+<pre><code class="language-none">  1   &quot;P*T*好!一个暑假没见到啦！&quot;,
+  2   &quot;在路上竟然碰到了好久不见的P*,好开心!&quot;
+
+  1是布偶说的话，2是对应的日记内容。
+  其中P*表示一个人物，可以参照以下数组
+
+      P:[[&quot;老师&quot;,&quot;校长&quot;,&quot;教导主任&quot;,&quot;班主任&quot;],
+             [&quot;黛西&quot;,&quot;阿楠&quot;,&quot;塔芙&quot;,&quot;罗斯奈&quot;]
+            ],
+    P*会根据*是0还是1决定老师还是同学，并且从上表中随机一个值填入。
+
+    T*表示时间，参照以下数组
+
+      T:[&quot;早上&quot;,&quot;中午&quot;,&quot;傍晚&quot;],
+
+  T*会根据一开始随机生成的时间，确定现在是说“早上好”还是“中午好”还是“傍晚好”。</code></pre>
+
+<p>整个名词的参照表附在了最后。通过对名次的多样化设计加以词素抽离出来后，语句更加丰富了。</p>
+</blockquote>
+
+<h3 id="toc_9">4.连接词多样化</h3>
+
+<blockquote>
+<p>日记中，连接多个语句的连接词作了简单处理。根据先后顺序，随机生成一个连接词。</p>
+
+<pre><code class="language-none">      连接词参照下表
+          prc:[
+                [&quot;一开始&quot;,&quot;之后&quot;,&quot;过了一会儿&quot;,&quot;然后&quot;],//第一句之前
+                [&quot;又过了会儿&quot;,&quot;接着&quot;,&quot;之后&quot;,&quot;然后&quot;],//第二句之前
+                [&quot;最后&quot;,&quot;再过了会儿&quot;,&quot;接着&quot;,&quot;后来&quot;]//第三句之前
+            ]</code></pre>
+</blockquote>
+
+<h3 id="toc_10">5.表达方式多样化</h3>
+
+<blockquote>
+<p>前面几个部分都是在维持故事丰富性的基础下减少劳力。而这一部分只是单纯地通过增加劳力来丰富故事。</p>
+
+<p>核心思想就是，在同一状态：同一心情、饥饿程度、时间、遇到同一物体的情况下，准备多种表达方式来丰富故事多样性。</p>
+
+<pre><code class="language-none">  例如
+      &quot;发现了一个O0!闻起来很不错呢。&quot;
+       &quot;这是什么？似乎是个O0呢!&quot;
+       &quot;太棒了，我看到了一个O0!&quot;啦。
+  这三句话都是在饥饿程度一般的情况下，碰到汉堡时说的话。
+  （其中O0是一个可以替换词素的标识符，
+          可以被[&quot;汉堡&quot;,&quot;汉堡包&quot;,&quot;面包夹肉&quot;,&quot;好吃的带馅面包&quot;]替换）</code></pre>
+
+<p>所以简单地来说就是语句准备地越多，内容越丰富。</p>
+</blockquote>
+
+<h2 id="toc_11">修改方向</h2>
+
+<h3 id="toc_12">1.语言更换</h3>
+
+<blockquote>
+<p>从中文变为英文</p>
+</blockquote>
+
+<h3 id="toc_13">2.增加控制的变量</h3>
+
+<blockquote>
+<p>从仅有的三个变量：心情、饥饿、时间 扩展到更多的如：疲劳，衣着好看程度(比如出门很干净，摔了一角以后变脏了），是否困倦等等其他变量，增加故事的线索。</p>
+</blockquote>
+
+<h3 id="toc_14">3.增加模块</h3>
+
+<blockquote>
+<p>demo只有6个卡片。增加卡片数量，主要是增加了语言设计的工作量。</p>
+</blockquote>
+
+<h3 id="toc_15">4. 修改已有故事</h3>
+
+<blockquote>
+<p>故事的内容还有不少问题。暂不做分析。</p>
+</blockquote>
+
+<h3 id="toc_16">5.</h3>
+
+<p></br>
+</br>
+</br>
+</br>
+</br></p>
+
+<h2 id="toc_17">附录</h2>
+
+<h3 id="toc_18">格式解释</h3>
+
+<blockquote>
+<p>对于名词，</p>
+
+<pre><code class="language-none">      P:[[&quot;老师&quot;,&quot;校长&quot;,&quot;教导主任&quot;,&quot;班主任&quot;],
+            [&quot;黛西&quot;,&quot;阿楠&quot;,&quot;塔芙&quot;,&quot;罗斯奈&quot;]
+        ],</code></pre>
+
+<p>对应于P0 P1 P*这些词素.</p>
+
+<pre><code class="language-none">  P0表示老师，可以从[&quot;老师&quot;,&quot;校长&quot;,&quot;教导主任&quot;,&quot;班主任&quot;]中选择一个替换。
+
+  P1表示同学，可以从[&quot;黛西&quot;,&quot;阿楠&quot;,&quot;塔芙&quot;,&quot;罗斯奈&quot;]中选择一个替换。
+
+  P*可以从中随意挑选。</code></pre>
+
+<hr>
+
+<p>对于语句，</p>
+
+<pre><code class="language-none">      [&quot;太棒了，我看到了一个O0!正饿着呢。&quot;,&quot;发现了一个O0,正好饿着呢，我就把他吃啦&quot;,&quot;H0O0&quot;,&quot;H+&quot;],</code></pre>
+
+<p>可以分解为4个部分，</p>
+
+<pre><code class="language-none">      1.&quot;太棒了，我看到了一个O0!正饿着呢。&quot;</code></pre>
+
+<p>表示碰到物体时即使说的话。O0是可替换的词素。</p>
+
+<pre><code class="language-none">      2.&quot;发现了一个O0,正好饿着呢，我就把他吃啦&quot;</code></pre>
+
+<p>表示记录到日记中的话语。</p>
+
+<pre><code class="language-none">      3.&quot;H0O0&quot;</code></pre>
+
+<p>表示这句话触发的条件。只有在H0（也就是饥饿程度0的时候）O0(也就是碰到了第一个物体，即汉堡的时候）才会出发这句话</p>
+
+<pre><code class="language-none">      4.&quot;H+&quot;</code></pre>
+
+<p>表示这句话的副作用，H+表示会使饥饿值＋1，也就是变得不饿了。</p>
+</blockquote>
+
+<h3 id="toc_19">名词参照表</h3>
+
+<pre><code class="language-none">    //名词
+    var noun={
+        //碰到了人物
+        P:[[&quot;老师&quot;,&quot;校长&quot;,&quot;教导主任&quot;,&quot;班主任&quot;],
+            [&quot;黛西&quot;,&quot;阿楠&quot;,&quot;塔芙&quot;,&quot;罗斯奈&quot;]
+        ],
+        //碰到了物体
+        O:[
+            [&quot;汉堡&quot;,&quot;汉堡包&quot;,&quot;面包夹肉&quot;,&quot;好吃的带馅面包&quot;],
+            [&quot;书&quot;,&quot;杂志&quot;,&quot;手册&quot;,&quot;画册&quot;],
+        ],
+        //时间
+        T:[&quot;早上&quot;,&quot;中午&quot;,&quot;傍晚&quot;],
+
+        //心情属性
+        M:[&quot;心情不快&quot;,&quot;心情一般&quot;,&quot;心情愉快&quot;],
+        //饥饿属性
+        H:[&quot;饥饿&quot;,&quot;不饿&quot;,&quot;吃撑&quot;],
+
+
+        //连接词
+        prc:[
+                [&quot;一开始&quot;,&quot;之后&quot;,&quot;过了一会儿&quot;,&quot;然后&quot;],
+                [&quot;又过了会儿&quot;,&quot;接着&quot;,&quot;之后&quot;,&quot;然后&quot;],
+                [&quot;最后&quot;,&quot;再过了会儿&quot;,&quot;接着&quot;,&quot;后来&quot;]
+            ]
+    };
+
+    //P0 老师 P1 同学
+    //T0 早上 T1 中午 T2 晚上
+    //M0 难过 M1 一般 M2 开心
+    //O0 汉堡 O1 书本
+    //H0 很饿 H1 一般 H2 很饱
+    // 出现//的后面是隐含要求</code></pre>
+
+<h3 id="toc_20">语句参照表</h3>
+
+<pre><code class="language-none">    //语句
+    var sentence = [
+        [
+            [&quot;P*,T*好...呜呜&quot;,&quot;碰到了P*，却没好好打招呼。&quot;,&quot;M0&quot;],
+            [&quot;P*...T*好...&quot;,&quot;遇见了P*，他说我没什么精神呐。&quot;,&quot;M0&quot;],
+            [&quot;P*T*好...&quot;,&quot;遇上了P*，他好像也不太开心啊。&quot;,&quot;M0&quot;],
+            [&quot;呜呜，T*好...P*～&quot;,&quot;心情不好，碰到了T*，却差点忘了他是谁呢。&quot;,&quot;M0&quot;],
+            [&quot;P*,T*好!&quot;,&quot;遇到了P*，不过他好像没有注意到我？&quot;,&quot;M1&quot;],
+            [&quot;T*好,P*!&quot;,&quot;嘿嘿，然后碰到了P*啦，打了个招呼。&quot;,&quot;M1&quot;],
+            [&quot;T*好!&quot;,&quot;路上正巧碰到了P*,似乎忘了称呼他呢。他看上去心情也不错。&quot;,&quot;M1&quot;],
+            [&quot;P*你好～&quot;,&quot;遇到P*了，打了个招呼。&quot;,&quot;M1&quot;],
+            [&quot;P*T*好～&quot;,&quot;遇到了P*，他看上去很高兴呢。&quot;,&quot;M2&quot;],
+            [&quot;T*好,P*!!&quot;,&quot;路上遇见了P*,很有精神地打了一个招呼。&quot;,&quot;M2&quot;],
+            [&quot;P*T*好!一个暑假没见到啦！&quot;,&quot;在路上竟然碰到了好久不见的P*,好开心!&quot;,&quot;M2&quot;],
+            [&quot;T*——好——！&quot;,&quot;然后见到了P*,非常高兴。&quot;,&quot;M2&quot;]
+        ],//碰到人物的时候
+        [
+            [&quot;太棒了，我看到了一个O0!正饿着呢。&quot;,&quot;发现了一个O0,正好饿着呢，我就把他吃啦&quot;,&quot;H0O0&quot;,&quot;H+&quot;],
+            [&quot;嘿，你看这是什么？一个O0!正饿着呢。&quot;,&quot;找到了一个O0,正饿着呢，太棒了。&quot;,&quot;H0O0&quot;,&quot;H+&quot;],
+            [&quot;不知道谁掉了一个O0？虽然想吃掉它，但是...&quot;,&quot;捡到了一个O0，虽然很饿但是还是还给他的主人吧。&quot;,&quot;H0O0&quot;],
+            [&quot;发现了一个O0!闻起来很不错呢。&quot;,&quot;在路上发现了一个O0,虽然不饿，不过太香啦，我就把他吃掉了。&quot;,&quot;H1O0&quot;,&quot;H+&quot;],
+            [&quot;这是什么？似乎是个O0呢!&quot;,&quot;捡到了一个O0。谁这么粗心掉了O0呢？&quot;,&quot;H1O0&quot;],
+            [&quot;太棒了，我看到了一个O0!&quot;,&quot;碰巧看到了一个O0。哎呀，不管是谁的，我把它吃掉啦。&quot;,&quot;H1O0&quot;,&quot;H+&quot;],
+            [&quot;咦？谁的O0？&quot;,&quot;不知道谁掉的O0。不过吃的好饱，一点也没有食欲呢。&quot;,&quot;H2O0&quot;],
+            [&quot;哈，这里有一个O0呢。&quot;,&quot;看到了一个O0。可惜我已经吃饱啦，就不管它了。&quot;,&quot;H2O0&quot;],
+            [&quot;看到了一个O0!&quot;,&quot;发现了一个O0,正好饿着呢，我就把他吃啦&quot;,&quot;H2O0&quot;],
+            [&quot;咦？有一本O1？&quot;,&quot;看到了不知道谁掉的O1，心里一定很急吧&quot;,&quot;O1&quot;],
+            [&quot;哈，有一本O1呢！&quot;,&quot;看到了一个O1。很喜欢，就带走啦。&quot;,&quot;O1&quot;],
+            [&quot;怎么有一本O1？真巧，带回去读一读吧&quot;,&quot;找到了一本O1,我就把它带回去读了。&quot;,&quot;O1&quot;],
+        ],//碰到物体的时候
+        [
+            [&quot;啊，走路没注意，掉进喷泉的池子里了，浑身湿透，现在又冷又饿。&quot;,&quot;在花园走路的时候没注意，一不小心摔倒了喷泉的水池里，浑身都湿啦。又冷又饿，心情简直差到了极点&quot;,&quot;H0&quot;],
+            [&quot;突然闻到了一阵香味，有点饿啦。但是找不到哪来的香味，真扫兴。&quot;,&quot;突然闻到了一阵香味，我却始终找不到香味是哪来的，真是一种煎熬，不开心。&quot;,&quot;H1&quot;],
+            [&quot;啊，不小心在花园里摔了一跤。新衣服弄脏啦。&quot;,&quot;在小径上走的时候没注意，绊到了一个石头，摔了一跤，新衣服上都是泥，心情差极了。&quot;,&quot;H2&quot;],
+        ],//碰到坏心情的时候
+        [
+            [&quot;想起来早上在自己的口袋里藏了好几块巧克力！正好饿的不行，太棒了！&quot;,&quot;想起来早上在自己的口袋里藏了好几块巧克力！正好饿的不行，太棒了！&quot;,&quot;H0&quot;,&quot;H+&quot;],
+            [&quot;听说我的作业被表扬啦。&quot;,&quot;同学来告诉我，我的作业被表扬了，心里别提有多高兴了。&quot;,&quot;H1&quot;],
+            [&quot;听说明天放假啦，真是太开心了！&quot;,&quot;突然听到广播里说，明天放假啦。真是突如其来的好消息，太开心了！&quot;,&quot;H2&quot;],
+        ],//碰到好心情的时候
+        [
+            [&quot;&quot;,&quot;不知道为什么，今天心情不太好。T*饭也没吃就去了学校。&quot;,&quot;M0H0&quot;],
+            [&quot;&quot;,&quot;来不及啦，T*饭也没吃就去了学校。&quot;,&quot;M1H0&quot;],
+            [&quot;&quot;,&quot;今天是开学第一天，T*饭也没吃就兴高采烈地去了学校。&quot;,&quot;M2H0&quot;],
+            [&quot;&quot;,&quot;不想上学。但还是不甘愿地在T*去了学校。&quot;,&quot;M0H1&quot;],
+            [&quot;&quot;,&quot;T*去了学校。&quot;,&quot;M1H1&quot;],
+            [&quot;&quot;,&quot;开学啦！开开心心去学校！&quot;,&quot;M2H1&quot;],
+            [&quot;&quot;,&quot;吃地太撑啦，真不想去学校。&quot;,&quot;M0H2&quot;],
+            [&quot;&quot;,&quot;吃地好饱，去学校咯。&quot;,&quot;M1H2&quot;],
+            [&quot;&quot;,&quot;大T*的，好好地吃了一顿，之后蹦蹦跳跳地来到了学校。&quot;,&quot;M2H2&quot;]
+        ],//开场
+        [
+            [&quot;&quot;,&quot;哎，真是倒霉的一天。又饿又累，不开心。&quot;,&quot;M0H0&quot;],
+            [&quot;&quot;,&quot;虽然还是很饿，但今天过地还不错～&quot;,&quot;M1H0&quot;],
+            [&quot;&quot;,&quot;虽说饿着肚子，今天还是非常开心的！&quot;,&quot;M2H0&quot;],
+            [&quot;&quot;,&quot;今天真没意思。&quot;,&quot;M0H1&quot;],
+            [&quot;&quot;,&quot;嘛，今天还是挺愉快的。&quot;,&quot;M1H1&quot;],
+            [&quot;&quot;,&quot;太棒了！学校真开心！&quot;,&quot;M2H1&quot;],
+            [&quot;&quot;,&quot;肚子撑的难受，今天真是不怎么愉快。&quot;,&quot;M0H2&quot;],
+            [&quot;&quot;,&quot;算是不错的一天吧。&quot;,&quot;M1H2&quot;],
+            [&quot;&quot;,&quot;今天就是特别开心！！特！别！开！心！&quot;,&quot;M2H2&quot;]
+        ]
+    ];</code></pre>
+
+<script type="text/x-mathjax-config">
+if (typeof MathJaxListener !== 'undefined') {
+  MathJax.Hub.Register.StartupHook('End', function () {
+    MathJaxListener.invokeCallbackForKey_('End');
+  });
+}
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+
+</html>
