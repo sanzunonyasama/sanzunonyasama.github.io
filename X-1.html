@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>故事生成demo</title>
+    <title>Story Generator Demo</title>
     <link rel = "stylesheet" href = "./css/x-1.css"/>
     <link rel = "stylesheet" href = "./lib/bootflat/css/site.min.css" />
 
@@ -19,15 +19,17 @@
         <hr>
         <div class = "row yooo">
             <div class= 'col-lg-5 col-lg-offset-1 text-center'>
-                <h4>我说的话</h4>
-                <div>当前状态：<span id = "mood"></span> <span id = "hunger"></span></div>
-                <div>当前时间： <span id="time"></span></div>
+                <h4>Real Time Speech</h4>
+                <div>Current Hunger : <span id = "mood"></span></div>
+                <div>Current Mood : <span id = "hunger"></span></div>
+                <div>Current Time : <span id = "time"></span></div>
+                <div>Current Weather : <span id = "weather"></span></div>
                 <div id = "expboard">
 
                 </div>
             </div>
-            <div class= 'col-lg-5 text-center'>
-                <h4>故事板</h4>
+            <div class = 'col-lg-5 text-center'>
+                <h4>Diary</h4>
                 <div id = "storyboard"  class = "hidden">
 
                 </div>
@@ -38,107 +40,210 @@
         <hr>
 
         <div class = 'row'>
-            <div style= "position:relative;margin-bottom:40px;;width:100%;" class = 'text-center'>请选择下一步碰到的物体！</div>
+            <div style= "position:relative;margin-bottom:40px;;width:100%;" class = 'text-center'>Step1</div>
             <div class = 'col-lg-2'>
                 <div class = 'select-button   r1'>
-                老师
+                    Teacher
                 </div>
             </div>
             <div class = 'col-lg-2 '>
                 <div class = 'select-button   r2'>
-                同学
+                    Friend
                 </div>
             </div>
             <div class = 'col-lg-2 '>
                 <div class = 'select-button   r3'>
-                    汉堡
+                    Burger
                 </div>
             </div>
             <div class = 'col-lg-2 '>
                 <div class = 'select-button   r4'>
-                    书
+                    Book
                 </div>
             </div>
             <div class = 'col-lg-2 '>
                 <div class = 'select-button   r5'>
-                    难过
+                    Sad
                 </div>
             </div>
             <div class = 'col-lg-2 '>
                 <div class = 'select-button   r6'>
-                    开心
+                    Happy
                 </div>
             </div>
         </div>
 
         <div class = 'row hidden'>
-            <div style= "position:relative;margin-bottom:40px;;width:100%;" class = 'text-center'>请继续选择下一步碰到的物体！</div>
+            <div style= "position:relative;margin-bottom:40px;;width:100%;" class = 'text-center'>Step2</div>
             <div class = 'col-lg-2'>
                 <div class = 'select-button   r1'>
-                    老师
+                    Teacher
                 </div>
             </div>
             <div class = 'col-lg-2 '>
                 <div class = 'select-button   r2'>
-                    同学
+                    Friend
                 </div>
             </div>
             <div class = 'col-lg-2 '>
                 <div class = 'select-button   r3'>
-                    汉堡
+                    Burger
                 </div>
             </div>
             <div class = 'col-lg-2 '>
                 <div class = 'select-button   r4'>
-                    书
+                    Book
                 </div>
             </div>
             <div class = 'col-lg-2 '>
                 <div class = 'select-button   r5'>
-                    难过
+                    Sad
                 </div>
             </div>
             <div class = 'col-lg-2 '>
                 <div class = 'select-button   r6'>
-                    开心
+                    Happy
                 </div>
             </div>
         </div>
 
         <div class = 'row hidden'>
-            <div style= "position:relative;margin-bottom:40px;;width:100%;" class = 'text-center'>请选择最后碰到的物体！</div>
+            <div style= "position:relative;margin-bottom:40px;;width:100%;" class = 'text-center'>Step3</div>
             <div class = 'col-lg-2'>
                 <div class = 'select-button   r1'>
-                    老师
+                    Teacher
                 </div>
             </div>
             <div class = 'col-lg-2 '>
                 <div class = 'select-button   r2'>
-                    同学
+                    Friend
                 </div>
             </div>
             <div class = 'col-lg-2 '>
                 <div class = 'select-button   r3'>
-                    汉堡
+                    Burger
                 </div>
             </div>
             <div class = 'col-lg-2 '>
                 <div class = 'select-button   r4'>
-                    书
+                    Book
                 </div>
             </div>
             <div class = 'col-lg-2 '>
                 <div class = 'select-button   r5'>
-                    难过
+                    Sad
                 </div>
             </div>
             <div class = 'col-lg-2 '>
                 <div class = 'select-button   r6'>
-                    开心
+                    Happy
                 </div>
             </div>
         </div>
 
+
+        <div class = 'row hidden'>
+            <div style= "position:relative;margin-bottom:40px;;width:100%;" class = 'text-center'>Step4</div>
+            <div class = 'col-lg-2'>
+                <div class = 'select-button   r1'>
+                    Teacher
+                </div>
+            </div>
+            <div class = 'col-lg-2 '>
+                <div class = 'select-button   r2'>
+                    Friend
+                </div>
+            </div>
+            <div class = 'col-lg-2 '>
+                <div class = 'select-button   r3'>
+                    Burger
+                </div>
+            </div>
+            <div class = 'col-lg-2 '>
+                <div class = 'select-button   r4'>
+                    Book
+                </div>
+            </div>
+            <div class = 'col-lg-2 '>
+                <div class = 'select-button   r5'>
+                    Sad
+                </div>
+            </div>
+            <div class = 'col-lg-2 '>
+                <div class = 'select-button   r6'>
+                    Happy
+                </div>
+            </div>
+        </div>
+
+        <div class = 'row hidden'>
+            <div style= "position:relative;margin-bottom:40px;;width:100%;" class = 'text-center'>Step5</div>
+            <div class = 'col-lg-2'>
+                <div class = 'select-button   r1'>
+                    Teacher
+                </div>
+            </div>
+            <div class = 'col-lg-2 '>
+                <div class = 'select-button   r2'>
+                    Friend
+                </div>
+            </div>
+            <div class = 'col-lg-2 '>
+                <div class = 'select-button   r3'>
+                    Burger
+                </div>
+            </div>
+            <div class = 'col-lg-2 '>
+                <div class = 'select-button   r4'>
+                    Book
+                </div>
+            </div>
+            <div class = 'col-lg-2 '>
+                <div class = 'select-button   r5'>
+                    Sad
+                </div>
+            </div>
+            <div class = 'col-lg-2 '>
+                <div class = 'select-button   r6'>
+                    Happy
+                </div>
+            </div>
+        </div>
+
+
+        <div class = 'row hidden'>
+            <div style= "position:relative;margin-bottom:40px;;width:100%;" class = 'text-center'>Step6</div>
+            <div class = 'col-lg-2'>
+                <div class = 'select-button   r1'>
+                    Teacher
+                </div>
+            </div>
+            <div class = 'col-lg-2 '>
+                <div class = 'select-button   r2'>
+                    Friend
+                </div>
+            </div>
+            <div class = 'col-lg-2 '>
+                <div class = 'select-button   r3'>
+                    Burger
+                </div>
+            </div>
+            <div class = 'col-lg-2 '>
+                <div class = 'select-button   r4'>
+                    Book
+                </div>
+            </div>
+            <div class = 'col-lg-2 '>
+                <div class = 'select-button   r5'>
+                    Sad
+                </div>
+            </div>
+            <div class = 'col-lg-2 '>
+                <div class = 'select-button   r6'>
+                    Happy
+                </div>
+            </div>
+        </div>
 
         <hr>
         <div class = 'row' style = "margin-bottom:250px;">
@@ -148,11 +253,11 @@
             </button>
 
             <button class="btn btn-danger  col-lg-offset-5 col-lg-2" id = 'owari'>
-                结束
+                End
             </button>
 
         </div>
     </div>
-    <script type = "text/javascript" src = "./js/x-1.js"></script>
+    <script type = "text/javascript" src = "./js/x-2.js"></script>
 </body>
 </html>
